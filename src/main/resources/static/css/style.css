@@ -7,16 +7,19 @@
 
 footer{
 	background-color:#ff8000;
-	text-align:center;
-	margin-top:10px;
-	opacity:0.8;
+ 	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	height: 150px;
 }
 header {
 	position: sticky;
+	padding-left: 10px;
 	top: 0; 
 	z-index: 1;
 	background-color:#ff8000;
-	opacity:0.5;
 }
 .copy{
 	font-family:serif;
@@ -64,4 +67,7 @@ h4{
 	text-align: center;
 	padding-bottom: 10px;
 	border-bottom: 2px solid orange;
+}
+body {
+    padding-bottom: 160px;
 }
