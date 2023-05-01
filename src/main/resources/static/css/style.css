@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+.cards{
+	display: flex;
+	padding: 10px;
+}
+
+footer{
+	background-color:#ff8000;
+	text-align:center;
+	margin-top:10px;
+	opacity:0.8;
+}
+header {
+	position: sticky;
+	top: 0; 
+	z-index: 1;
+	background-color:#ff8000;
+	opacity:0.5;
+}
+.copy{
+	font-family:serif;
+	font-size:10px;
+	font-weight:lighter;
+	color:white
+}
+
+.enlace{
+	color:white;
+	font-size:15px;
+	margin-left:5px;
+	font-family:serif;
+}
+
+h4{
+	color:white;
+	
+}
+.redes{
+	 width:30px;
+	 height:28px;
+	 margin:5px;
+}
+.card{
+	margin:10px;
+	padding: 5px;
+}
+
+#botones{
+	margin:10px;
+}
+
+/*FORMULARIO*/
+
+.formulario{
+	padding: 3%;
+	border: 2px solid;
+	border-radius: 10px;
+	margin: 15px;
+	border-color: orange;
+	background-color: #FEF5E7;
+}
+.formulario h3{
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 2px solid orange;
+}
