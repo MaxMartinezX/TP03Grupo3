@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+html{
+	min-height: 100%;
+	position: relative;
+}
+
 .cards{
 	display: flex;
 	padding: 10px;
