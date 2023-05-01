@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.cards{
+	display: flex;
+}
+
+footer{
+	background-color:#ff8000;
+	bottom:0;
+	text-align:center;
+	margin-top:10px;
+	opacity:0.8;
+}
+
+.copy{
+	font-family:serif;
+	font-size:10px;
+	font-weight:lighter;
+	color:white
+}
+
+.enlace{
+	color:white;
+	font-size:15px;
+	margin-left:5px;
+	font-family:serif;
+}
+
+h4{
+	color:white;
+	
+}
+.redes{
+	 width:30px;
+	 height:28px;
+	 margin:5px;
+}
+.card{
+	margin:5px;
+}
+
+#botones{
+	margin:10px;
+}
