@@ -7,9 +7,12 @@
 
 footer{
 	background-color:#ff8000;
-	text-align:center;
+ 	position: absolute;
+	left: 0;
 	bottom: 0;
 	width: 100%;
+	text-align: center;
+	height: 150px;
 }
 header {
 	position: sticky;
@@ -64,4 +67,7 @@ h4{
 	text-align: center;
 	padding-bottom: 10px;
 	border-bottom: 2px solid orange;
+}
+body {
+    padding-bottom: 160px;
 }
