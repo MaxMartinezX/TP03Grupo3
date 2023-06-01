@@ -12,15 +12,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
 import ar.edu.unju.edm.model.Producto;
 import ar.edu.unju.edm.service.IProductoService;
 import ar.edu.unju.edm.util.ListadoProductos;
 import ar.edu.unju.edm.controller.*;
 @Controller
 public class ProductoController {
+
 	private static final Log GRUPO3 = LogFactory.getLog(ProductoController.class);
-	
 	
 	//Inyeccion de dependencias
 	@Autowired
@@ -28,11 +27,12 @@ public class ProductoController {
 	
 	@Autowired
 	@Qualifier("servicioEnLista")
+
 	IProductoService unServicio;
 	
 	@GetMapping("/producto")
 	public ModelAndView solicitarProducto() {
-		
+
 		ModelAndView producto = new ModelAndView("formulario");
 		producto.addObject("formulario", unProducto);
 		

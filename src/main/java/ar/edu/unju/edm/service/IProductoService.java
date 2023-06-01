@@ -16,5 +16,4 @@ public interface IProductoService {
 	public Producto mostrarUnProducto(Integer codigo);
 	public void eliminarTodosLosProductos();
 	public Producto modificarUnProducto(Integer codigo);
-	
 }
