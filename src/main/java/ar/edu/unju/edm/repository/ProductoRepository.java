@@ -1,12 +1,15 @@
 package ar.edu.unju.edm.repository;
 
-//import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Repository;
 
 import ar.edu.unju.edm.model.Producto;
 
-//import org.springframework.data.repository.CrudRepository;
+import java.util.List;
 
-//@Repository
-//public interface ProductoRepository extends CrudRepository <Producto, Integer>{
+import org.springframework.data.repository.CrudRepository;
 
-//}
+@Repository
+public interface ProductoRepository extends CrudRepository <Producto, Integer>{
+
+	public List<Producto> findByEstado (Boolean estado);
+}

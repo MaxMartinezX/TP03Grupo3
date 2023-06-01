@@ -6,10 +6,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import ar.edu.unju.edm.model.Producto;
+import ar.edu.unju.edm.repository.ProductoRepository;
 //import ar.edu.unju.edm.repository.ProductoRepository;
 import ar.edu.unju.edm.service.IProductoService;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.apache.juli.logging.Log;
 
@@ -18,21 +20,22 @@ import org.apache.juli.logging.Log;
 public class ImpMySQLProductoService implements IProductoService{
 	
 	@Autowired
-//	ProductoRepository productoRepository;
+	ProductoRepository productoRepository;
 	
 	private static final Log GRUPO3 = LogFactory.getLog(ImpMySQLProductoService.class);
 
 	@Override
 	public void cargarProducto(Producto unProducto) {
-		GRUPO3.fatal("Falta Guardar en BD");
-	//	productoRepository.save(unProducto);
+		
+		unProducto.setEstado(true);
+		productoRepository.save(unProducto);
 		
 	}
 
 	@Override
 	public ArrayList<Producto> listarProductos() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return (ArrayList<Producto>) productoRepository.findByEstado(true);
 	}
 
 	@Override
@@ -54,8 +57,11 @@ public class ImpMySQLProductoService implements IProductoService{
 	}
 	@Override
 	public void eliminarProducto(Integer unCodigo) {
-		// TODO Auto-generated method stub
-		
+		//productoRepository.deleteById(unCodigo);
+		Optional<Producto> auxiliar=Optional.of(new Producto());
+		auxiliar= productoRepository.findById(unCodigo);
+		auxiliar.get().setEstado(false);
+		productoRepository.save(auxiliar.get());
 	}
 	
 }

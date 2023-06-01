@@ -27,7 +27,7 @@ public class ProductoController {
 	Producto unProducto;
 	
 	@Autowired
-	@Qualifier("servicioEnLista")
+	@Qualifier("servicioEnMySQL")
 	IProductoService unServicio;
 	
 	@GetMapping("/producto")
@@ -47,7 +47,8 @@ public class ProductoController {
 		unServicio.cargarProducto(nuevoProducto);
 		
 		ModelAndView listadoFinal= new ModelAndView("mostrarListado");
-		listadoFinal.addObject("listado", ListadoProductos.getListado());
+		//listadoFinal.addObject("listado", ListadoProductos.getListado());
+		listadoFinal.addObject("listado", unServicio.listarProductos());
 		
 		return listadoFinal;
 	}
@@ -56,7 +57,7 @@ public class ProductoController {
 	public ModelAndView productos(Model model) {
 	
 		ModelAndView listadoFinal= new ModelAndView("mostrarListado");
-		listadoFinal.addObject("listado", ListadoProductos.getListado());
+		listadoFinal.addObject("listado", unServicio.listarProductos());
 		return listadoFinal;
 	}
 	
