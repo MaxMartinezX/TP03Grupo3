@@ -6,7 +6,7 @@
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- css -->
-	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" th:href="@{/css/style.css}">
 
 </head>
 <body>
@@ -28,8 +28,8 @@
 						
 						<label class="form-label">Nombre</label>
 						<input class="form-control" type="text" th:field="*{nombre}"><br>
-						<label class="form-label" th:if="${band == false}">Codigo</label>
-						<input class="form-control" type="number" th:field="*{codigo}" th:if="${band == false}"><br>
+						<!-- <label class="form-label" th:if="${band == false}">Codigo</label>
+						<input class="form-control" type="number" th:field="*{codigo}" th:if="${band == false}"><br>  -->
 						<label class="form-label">Descripcion</label>
 						<input class="form-control" type="text" th:field="*{descripcion}"><br>
 						<label class="form-label">Stock</label>
