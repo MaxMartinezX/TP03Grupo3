@@ -41,7 +41,9 @@ public class ImpMySQLProductoService implements IProductoService{
 	@Override
 	public Producto mostrarUnProducto(Integer codigo) {
 		// TODO Auto-generated method stub
-		return null;
+		Optional<Producto> auxiliar = Optional.of(new Producto());
+		auxiliar = productoRepository.findById(codigo);
+		return auxiliar.get();
 	}
 
 	@Override

@@ -38,6 +38,7 @@ public class ImpProductoService  implements IProductoService{
 	@Override
 	public Producto mostrarUnProducto(Integer codigo) {
 		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
