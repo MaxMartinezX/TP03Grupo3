@@ -18,18 +18,13 @@
 			</div>
 			<div class="col-6 formulario">
 				<h3>Cargar Producto</h3>
-				<form th:object="${formulario}" th:action="${band}?@{/modificarProducto}:@{/guardarProducto}" method="post" enctype="multipart/form-data">
-					
-					<!-- Para que cuando se modifique un producto, no se modificaran el codigo ni estado: -->
-					<input type="hidden" class="form-control" th:if="${band}" th:field="*{codigo}">
-					<input type="hidden" class="form-control" th:if="${band}" th:field="*{estado}">
-					
+				<form th:object="${formulario}" th:action="@{/guardarProducto}" method="post">
 					<div class="form-group mb-3">
 						
 						<label class="form-label">Nombre</label>
 						<input class="form-control" type="text" th:field="*{nombre}"><br>
-						<label class="form-label" th:if="${band == false}">Codigo</label>
-						<input class="form-control" type="number" th:field="*{codigo}" th:if="${band == false}"><br>
+						<label class="form-label">Codigo</label>
+						<input class="form-control" type="number" th:field="*{codigo}"><br>
 						<label class="form-label">Descripcion</label>
 						<input class="form-control" type="text" th:field="*{descripcion}"><br>
 						<label class="form-label">Stock</label>
@@ -38,10 +33,6 @@
 						<input class="form-control" type="text" th:field="*{marca}"><br>
 						<label class="form-label">Precio</label>
 						<input class="form-control" type="number" th:field="*{precio}"><br> <!-- Permitir decimales se usa el atributo step -> CSS -->
-						
-						<label class="form-label">Imagen</label>
-						<input class="form-control" type="file" name="file" accept="image/png, image/jpeg, image/gif, image/x-png, image/jpg" onchange="loadFile(event)" >
-							<img id="output" style="width:150px; padding:3px">
 						
 						<input class="btn btn-outline-warning" type="submit" value="REGISTRAR">
 						 

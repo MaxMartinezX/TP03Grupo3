@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+	<header th:fragment="header">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+		  <a class="navbar-brand" href="/">
+		  	<img src="/images/ClownTusLogo.png" height="65" alt="">
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		    <div class="navbar-nav">
+		      <a class="nav-item nav-link active" href="/">Inicio</a>
+		      <a class="nav-item nav-link" href="/producto">Cargar Producto</a>
+		    </div>
+		  </div>
+		</nav>
+	</header>
+	
+	<footer th:fragment="footer" class="absolute-bottom">
+		<img class="redes" src="images/instagram.png" alt="Instagram">
+		<img class="redes" src="images/facebook.png" alt="Facebook">
+		<h4>ClownTus</h4>
+		<p class="copy">Copyright@ ClownTus Inc.</p>
+		<a class="enlace" href="https://github.com/MaxMartinezX/TP03Grupo3" target="_blank">Repositorio de GitHub</a>
+	</footer>
+	
+</body>
+</html>

@@ -1,6 +1,16 @@
 package ar.edu.unju.edm.model;
 
+import org.springframework.stereotype.Component;
+
+import jakarta.persistence.Entity;
+
+import jakarta.persistence.*;
+
+@Component
+@Entity
 public class Producto {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer codigo;
 	private String nombre;
 	private String descripcion;
@@ -9,13 +19,16 @@ public class Producto {
 	private String marca;
 	private Boolean estado;
 	
+	@Column (name="fotografia", columnDefinition="BLOB")
+	private String imagen;
+	
 	public Producto() {
 		
 	}
 	
 
 	public Producto(Integer codigo, String nombre, String descripcion, Float precio, Integer stock, String marca,
-			Boolean estado) {
+			Boolean estado, String imagen) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -24,6 +37,7 @@ public class Producto {
 		this.stock = stock;
 		this.marca = marca;
 		this.estado = estado;
+		this.imagen = imagen;
 	}
 
 
@@ -83,7 +97,17 @@ public class Producto {
 	public void setEstado(Boolean estado) {
 		this.estado = estado;
 	}
-	
 
+
+	public String getImagen() {
+		return imagen;
+	}
+
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+	
+	
 }
 
